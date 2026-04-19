@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Success Motors — оставьте заявку, мы свяжемся с вами." />
+    <title>Success Motors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <p class="brand">Success <span>Motors</span></p>
+      </header>
+
+      <main class="card">
+        <form
+          id="lead-form"
+          action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00Dg7000003FuzR"
+          method="POST"
+          novalidate
+        >
+          <input type="hidden" name="oid" value="00Dg7000003FuzR" />
+          <input type="hidden" id="ret-url" name="retURL" value="thankyou.html" />
+
+          <div class="field" data-validate="company">
+            <label for="company">Company Name</label>
+            <input
+              id="company"
+              maxlength="40"
+              minlength="2"
+              name="company"
+              type="text"
+              autocomplete="organization"
+              placeholder="Company Name"
+              required
+              title="Enter the correct Company Name"
+              aria-describedby="err-company"
+              aria-invalid="false"
+            />
+           <p class="field-error" id="err-company" role="alert"></p>
+          </div>
+
+          <div class="field" data-validate="first_name">
+            <label for="first_name">First Name</label>
+            <input
+              id="first_name"
+              maxlength="40"
+              minlength="2"
+              name="first_name"
+              type="text"
+              autocomplete="given-name"
+              required
+              pattern="[A-Za-zА-Яа-яЁё\s\-']{2,40}"
+              title="Enter the correct First Name"
+              aria-describedby="err-first_name"
+              aria-invalid="false"
+            />
+            <p class="field-error" id="err-first_name" role="alert"></p>
+          </div>
+
+          <div class="field" data-validate="last_name">
+            <label for="last_name">Last Name</label>
+            <input
+              id="last_name"
+              maxlength="80"
+              minlength="2"
+              name="last_name"
+              type="text"
+              autocomplete="family-name"
+              required
+              pattern="[A-Za-zА-Яа-яЁё\s\-']{2,80}"
+              title="Enter the correct Last Name"
+              aria-describedby="err-last_name"
+              aria-invalid="false"
+            />
+            <p class="field-error" id="err-last_name" role="alert"></p>
+          </div>
+
+          <div class="field" data-validate="email">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              maxlength="80"
+              name="email"
+              type="email"
+              autocomplete="email"
+              inputmode="email"
+              placeholder="you@example.com"
+              required
+              title="Enter a valid email, for example name@example.com"
+              aria-describedby="err-email"
+              aria-invalid="false"
+            />
+            <p class="field-error" id="err-email" role="alert"></p>
+          </div>
+
+          <div class="field" data-validate="phone">
+            <label for="phone">Phone</label>
+            <input
+              id="phone"
+              maxlength="15"
+              minlength="10"
+              name="phone"
+              type="text"
+              autocomplete="tel-national"
+              inputmode="numeric"
+              placeholder="375291234567"
+              required
+              pattern="[0-9]{10,15}"
+              title="Enter the correct Phone"
+              aria-describedby="err-phone"
+              aria-invalid="false"
+            />
+            <p class="field-error" id="err-phone" role="alert"></p>
+          </div>
+
+          <div class="field" data-validate="product">
+            <label for="product">Product</label>
+            <select id="product" name="00Ng7000003lnju" required title="Please select a product" aria-describedby="err-product" aria-invalid="false">
+              <option value="">Select a product</option>
+              <option value="HK007A1">Carpets Hyundai</option>
+              <option value="HK008A2">Carpets Kia</option>
+              <option value="L005A1">Carpets Lada</option>
+              <option value="R008A1">Carpets Renault</option>
+              <option value="VAG010A">Carpets Skoda</option>
+              <option value="VAG009">Carpets Volkswagen</option>
+              <option value="VAG007">CFNA</option>
+              <option value="VAG008E5">CFNB</option>
+              <option value="VAG005">CFW</option>
+              <option value="VAG006E3">CWVA</option>
+              <option value="VAG004E">CZCA</option>
+              <option value="HK006E2">G4FG</option>
+              <option value="HK005E1">G4LC</option>
+              <option value="R007E3">H4M</option>
+              <option value="HK003C3">Hyundai Accent</option>
+              <option value="HK004C4">Hyundai Solaris</option>
+              <option value="R006E2">K4M</option>
+              <option value="R005E1">K7M</option>
+              <option value="HK001C1">Kia Rio</option>
+              <option value="HK002C2">Kia Rio X-Line</option>
+              <option value="L001C1">Lada Vesta</option>
+              <option value="L002C2">Lada Xray</option>
+              <option value="MI001A1">Phone holder Xiaomi</option>
+              <option value="R001C1">Renault Logan</option>
+              <option value="R002C2">Renault Logan Step</option>
+              <option value="R003C3">Renault Sandero</option>
+              <option value="R004C4">Renault Sandero Stepway</option>
+              <option value="VAG003C3">Skoda Rapid</option>
+              <option value="L004E2">VAZ-21129</option>
+              <option value="L003E1">VAZ-21179</option>
+              <option value="VAG002C2">Volkswagen Polo 2021</option>
+              <option value="VAG001C1">Volkswagen Polo Sedan</option>
+            </select>
+            <p class="field-error" id="err-product" role="alert"></p>
+          </div>
+
+          <div class="field" id="captcha-field">
+            <div class="g-recaptcha" data-sitekey="6LeyQ7wsAAAAAAcZbRz9QwgOv5mOJXq0-FPt83A4"></div>
+            <p class="field-error" id="err-captcha" role="alert"></p>
+          </div>
+
+          <div class="submit-wrap">
+            <input type="submit" name="submit" value="Send" />
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script>
+      (function () {
+        var form = document.getElementById("lead-form");
+        if (!form) return;
+        var controls = form.querySelectorAll("input:not([type='hidden']):not([type='submit']), select");
+
+        var phone = document.getElementById("phone");
+        if (phone) {
+          phone.addEventListener("input", function () {
+            phone.value = phone.value.replace(/\D/g, "").slice(0, 15);
+          });
+        }
+
+        function setFieldError(control, message) {
+          var errorId = control.getAttribute("aria-describedby");
+          var errorEl = errorId ? document.getElementById(errorId) : null;
+          var fieldEl = control.closest(".field");
+          if (errorEl) errorEl.textContent = message || "";
+          if (fieldEl) fieldEl.classList.toggle("field--error", !!message);
+          control.setAttribute("aria-invalid", message ? "true" : "false");
+        }
+
+        function clearFieldError(control) {
+          setFieldError(control, "");
+        }
+
+        controls.forEach(function (control) {
+          var eventName = control.tagName === "SELECT" ? "change" : "input";
+          control.addEventListener(eventName, function () {
+            clearFieldError(control);
+          });
+        });
+
+        form.addEventListener("submit", function (e) {
+          var hasErrors = false;
+          var firstInvalid = null;
+
+          controls.forEach(function (control) {
+            clearFieldError(control);
+            if (!control.checkValidity()) {
+              var msg = control.getAttribute("title") || "Please fill out this field.";
+              setFieldError(control, msg);
+              if (!firstInvalid) firstInvalid = control;
+              hasErrors = true;
+            }
+          });
+
+          var captchaErr = document.getElementById("err-captcha");
+          var captchaField = document.getElementById("captcha-field");
+          if (captchaErr) captchaErr.textContent = "";
+          if (captchaField) captchaField.classList.remove("field--error");
+
+          if (!(window.grecaptcha && grecaptcha.getResponse && grecaptcha.getResponse())) {
+            if (captchaErr) captchaErr.textContent = "Please complete the captcha";
+            if (captchaField) captchaField.classList.add("field--error");
+            hasErrors = true;
+          }
+
+          if (hasErrors) {
+            e.preventDefault();
+            if (firstInvalid) firstInvalid.focus();
+          }
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var el = document.getElementById("ret-url");
+        if (el) el.value = new URL("thankyou.html", window.location.href).toString();
+      })();
+    </script>
+  </body>
+</html>
